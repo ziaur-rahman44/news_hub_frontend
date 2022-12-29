@@ -1,0 +1,38 @@
+.mainBox{
+    background-color: rgb(234,234,233);
+    max-height: 310px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.itemBanner{
+    border-bottom: 1px solid rgb(177, 168, 168);
+    text-align: start;
+    padding-left: 10px!important;
+    font-size: 18px!important;
+    padding: 10px;
+}
+.titleTop{
+    background-color: rgb(123, 128, 127);
+    color: white;
+    padding:16px;
+}
+.titleTop h2{
+    padding: 5px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="mainBox"] {
+     max-height: 200px;
+     font-size: 15px;
+     padding: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="boxSamprotik"] {
+    margin-top: 35px;
+    }
+}

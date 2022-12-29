@@ -1,0 +1,14 @@
+.sportN{
+    background-color: rgb(234,234,233);
+    padding: 20px;
+}
+.mainTitle h2{
+    font-weight: 500;
+    font-style: bold;
+    border-bottom: 5px solid rgb(56, 52, 112);
+    width: fit-content;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    text-align: start;
+    font-size: 25px;
+}

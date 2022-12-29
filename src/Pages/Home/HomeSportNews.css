@@ -1,0 +1,112 @@
+.sportN{
+    background-color: rgb(234,234,233);
+    padding: 20px;
+    
+}
+
+.firstBox{
+    position:relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    height: 340px;
+}
+.firstBoxtitle{
+    position: absolute;
+    display: flex;
+    align-items: justify;
+    transform: translate(y,50%);
+    top: 80%;
+    left: 5%;
+    right: 5%;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em rgb(15, 15, 31), 0 0 0.2em rgb(10, 10, 25);
+
+}
+
+.mainTitle{
+   background-color: rgb(179, 176, 176);
+   padding-top: 16px;
+   
+}
+.mainTitle h2{
+    font-weight: 500;
+    font-style: bold;
+    margin-left: 10px;
+    color: white;
+    
+}
+.markLink{
+    color:rgb(36, 36, 133)!important;
+    text-align: right;
+}
+.showBox{
+    display: flex;
+}
+.showBox2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    padding-left: 20px;
+    text-align:start;
+    
+}
+.homeItem{
+    margin: 8px;
+    padding-bottom: 5px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid rgb(156, 149, 149);
+
+}
+.secondBox .image{
+    height: 105px;
+    width: 180px;
+    
+}
+.secondBox{
+    display: flex;
+    width: full;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="showBox1"] {
+      flex-direction: row;
+      height: fit-content;
+      font-size: 15px;
+      display: block;
+    }
+    [class*="showBox"] {
+        display: block;
+        width: 100%;
+      }
+      [class*="showBox2"] {
+        text-align: right;
+
+      }
+     
+      [class*="firstBox"] {
+        height: fit-content;
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgb(156, 149, 149);
+      }
+      [class*="image"] {
+        width: fit-content;
+      }
+    [class*="resSecond"]{
+        height: auto;
+        font-size: 15px;
+    }
+    
+    [class*="rsThird"]{
+        height: auto;
+        font-size: 15px;
+    }
+    [class*="rsFourth"]{
+        height: auto;
+        font-size: 15px;
+    }
+    
+  }
