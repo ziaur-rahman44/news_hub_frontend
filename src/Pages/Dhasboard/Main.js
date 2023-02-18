@@ -6,7 +6,7 @@ const Main = () => {
   const [allnews, setAllnews] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/allnews')
+        fetch('https://news-hub-server-six.vercel.app/allnews')
         .then(res => res.json())
         .then(data => setAllnews(data))
     })
@@ -16,7 +16,7 @@ const Main = () => {
           const procced = window.confirm("You want to sure delete data?");
           if(procced){
             console.log("deleting user", id);
-            const url = `http://localhost:5000/allnews/${id}`;
+            const url = `https://news-hub-server-six.vercel.app/allnews/${id}`;
             fetch(url, {
               method: "DELETE",
               headers:{

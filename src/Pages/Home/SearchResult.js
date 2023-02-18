@@ -12,7 +12,7 @@ const SearchResult = () => {
   useEffect(() => {
     const searchProduct = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/shownews/search?query=${query}`); 
+        const { data } = await axios.get(`https://news-hub-server-six.vercel.app/shownews/search?query=${query}`); 
         setSearchResults(data);
         } catch (error) {
          setError(error.response?.data?.message);

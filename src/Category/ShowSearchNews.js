@@ -6,7 +6,7 @@ const ShowSearchNews = () => {
     const [getnews, setNatioalnanews] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:5000/getNews')
+        fetch('https://news-hub-server-six.vercel.app/getNews')
         .then(res => res.json())
         .then(data => setNatioalnanews(data))
     })

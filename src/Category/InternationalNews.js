@@ -6,7 +6,7 @@ const InternationalNews = () => {
     const [internationalnews, setInteratioalnanews] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/internationalnews')
+        fetch('https://news-hub-server-six.vercel.app/internationalnews')
         .then(res => res.json())
         .then(data => setInteratioalnanews(data))
     })

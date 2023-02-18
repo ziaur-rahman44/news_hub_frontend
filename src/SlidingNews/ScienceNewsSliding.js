@@ -10,7 +10,7 @@ const ScienceNewsSliding = () => {
     const carousel = useRef(null)
     
     useEffect(() => {
-        fetch(`http://localhost:5000/sciencenews`)
+        fetch(`https://news-hub-server-six.vercel.app/sciencenews`)
         .then(res => res.json())
         .then(data => setShowsport(data));
     },[]);

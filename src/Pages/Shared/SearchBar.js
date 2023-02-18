@@ -5,9 +5,9 @@ const SearchBar = () => {
     let [search, setSearch] = useSearchParams();
     const navigate = useNavigate();
     return (
-      <div>
+      <div class='text-sm'>
          <input
-         className='text-accent'
+         className='text-accent p-1'
           onChange={(e) => {
             setSearch(e.target.value)
           }}
@@ -15,7 +15,7 @@ const SearchBar = () => {
           placeholder="Search News"
          />
           <div>
-            <button className='bg-primary' onClick={() => navigate(`/search?query=${search}`)} >Search</button>
+            <button className='bg-primary p-1' onClick={() => navigate(`/search?query=${search}`)} >Search</button>
           </div>
       </div>
     )

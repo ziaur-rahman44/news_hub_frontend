@@ -6,7 +6,7 @@ const InternationalNewsDetails = () => {
     const {iaId} = useParams();
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/internationalnews/${iaId}`)
+        fetch(`https://news-hub-server-six.vercel.app/internationalnews/${iaId}`)
         .then(res => res.json())
         .then(data => setDetailsinternational(data))
     },[iaId])

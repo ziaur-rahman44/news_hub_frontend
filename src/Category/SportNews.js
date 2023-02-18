@@ -6,7 +6,7 @@ const SportNews = () => {
     const [shownews, setShowNewses] = useState([]);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/sportnews`)
+        fetch(`https://news-hub-server-six.vercel.app/sportnews`)
         .then(res => res.json())
         .then(data => setShowNewses(data));
     },[]);

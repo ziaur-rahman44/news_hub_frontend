@@ -6,7 +6,7 @@ const Banner = () => {
   const [showsport, setShowsport] = useState([]);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/sciencenews`)
+        fetch(`https://news-hub-server-six.vercel.app/sciencenews`)
         .then(res => res.json())
         .then(data => setShowsport(data));
     },[]);

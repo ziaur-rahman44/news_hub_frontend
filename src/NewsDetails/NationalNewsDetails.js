@@ -6,7 +6,7 @@ const NationalNewsDetails = () => {
     const {naId} = useParams();
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/nationalnews/${naId}`)
+        fetch(`https://news-hub-server-six.vercel.app/nationalnews/${naId}`)
         .then(res => res.json())
         .then(data => setDetailsnational(data))
     },[naId])

@@ -5,7 +5,7 @@ const ScienceNewsDetails = () => {
     const {saId} = useParams();
     const [scienceItem, setScienceItem] = useState({});
     useEffect(()=>{
-    fetch(`http://localhost:5000/sciencenews/${saId}`)
+    fetch(`https://news-hub-server-six.vercel.app/sciencenews/${saId}`)
     .then(res => res.json())
     .then(data => setScienceItem(data))
 },[saId])

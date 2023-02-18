@@ -10,7 +10,7 @@ const UpdateNews = () => {
   const {uId} = useParams();
   const [singlenews, setSinglenews] = useState({});
   useEffect(()=>{
-  fetch(`http://localhost:5000/allnews/${uId}`)
+  fetch(`https://news-hub-server-six.vercel.app/allnews/${uId}`)
   .then(res => res.json())
   .then(data => setSinglenews(data))
 },[uId])
@@ -41,7 +41,7 @@ const UpdateNews = () => {
     
     
     const news = {title, section, details};
-    const url = `http://localhost:5000/allnews/${uId}`;
+    const url = `https://news-hub-server-six.vercel.app/allnews/${uId}`;
     fetch(url,{
         method: 'PUT',
          headers:{

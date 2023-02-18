@@ -10,7 +10,7 @@ const InternationalNewsSliding = () => {
     const carousel = useRef(null)
     
     useEffect(() => {
-        fetch(`http://localhost:5000/internationalnews`)
+        fetch(`https://news-hub-server-six.vercel.app/internationalnews`)
         .then(res => res.json())
         .then(data => setShowsport(data));
     },[]);

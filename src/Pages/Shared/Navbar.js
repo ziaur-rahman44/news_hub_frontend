@@ -20,7 +20,7 @@ const Navbar = () => {
     // const sendData = event => {
     //     event.preventDefault();
     //     const searchResults = document.getElementById("searchResult");
-    //     fetch('http://localhost:5000/getNews',{
+    //     fetch('https://news-hub-server-six.vercel.app/getNews',{
     //         method: 'POST',
     //         headers:{
     //         'content-type': 'application/json',
@@ -81,7 +81,7 @@ const Navbar = () => {
                         
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl mr-24">LOGO</Link>
+                <Link to="/" className="btn btn-ghost normal-case text-xl mr-24">Honest News Hub</Link>
                
             </div>
             

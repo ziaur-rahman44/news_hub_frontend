@@ -51,7 +51,7 @@ const Post = () => {
     
 
     // axios
-    //   .post("http://localhost:5000/allnews",{
+    //   .post("https://news-hub-server-six.vercel.app/allnews",{
     //     headers:{
     //       'content-type': 'application/json; charset=UTF-8',
     //   }
@@ -60,7 +60,7 @@ const Post = () => {
     // .catch((err)=>{
     //   console.log(err)
     // })
-    fetch("http://localhost:5000/allnews",{
+    fetch("https://news-hub-server-six.vercel.app/allnews",{
       method: 'POST',
        headers:{
           'content-type': 'application/json;',

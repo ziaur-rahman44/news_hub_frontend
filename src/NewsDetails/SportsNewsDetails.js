@@ -5,7 +5,7 @@ const SportsNewsDetails = () => {
     const {sId} = useParams();
     const [detailsitem, setDetailsitem] = useState({});
     useEffect(()=>{
-    fetch(`http://localhost:5000/sportnews/${sId}`)
+    fetch(`https://news-hub-server-six.vercel.app/sportnews/${sId}`)
     .then(res => res.json())
     .then(data => setDetailsitem(data))
 },[sId])
