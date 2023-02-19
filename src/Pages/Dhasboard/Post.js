@@ -89,7 +89,7 @@ const Post = () => {
                         </div>
                         {/* /.card-header */}
                         {/* form start */}
-                        <form onSubmit={handleSubmit} encType="multipart/form-data">
+                        <form onSubmit={handleSubmit}>
                             <div className="card-body">
                             <div className="form-group text-left text-[20px] mb-2">
                                 <label>নিউজ টাইটেল</label>
