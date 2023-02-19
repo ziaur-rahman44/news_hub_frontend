@@ -47,24 +47,24 @@ const Post = () => {
     // const date = ;
     
 
-    axios
-      .post("https://news-hub-server-six.vercel.app/allnews",{
-        headers:{
-          'content-type': 'application/json; charset=UTF-8',
-      }
-      })
-    .then((res)=> setMassege(data))
-    .catch((err)=>{
-      console.log(err)
-    })
-  //   fetch("https://news-hub-server-six.vercel.app/allnews",{
-  //     method: 'POST',
-  //      headers:{
-  //         'content-type': 'application/json;',
-  //     },
-  //     body:JSON.stringify(data),
-  // })
-  // .then(res => res.json())
+    // axios
+    //   .post("https://news-hub-server-six.vercel.app/allnews",{
+    //     headers:{
+    //       'content-type': 'application/json; charset=UTF-8',
+    //   }
+    //   })
+    // .then((res)=> setMassege(res.data))
+    // .catch((err)=>{
+    //   console.log(err)
+    // })
+    fetch("https://news-hub-server-six.vercel.app/allnews",{
+      method: 'POST',
+       headers:{
+          'content-type': 'application/json;',
+      },
+      body:JSON.stringify(data),
+  })
+  .then(res => res.json())
     
    
     
@@ -142,7 +142,7 @@ const Post = () => {
                             </div>
                             {/* /.card-body */}
                             <div className="card-footer">
-                            <button type="submit" className="btn btn-primary px-12 text-2xl">সাবমিট করুন</button>
+                            <button type="submit"  className="btn btn-primary px-12 text-2xl">সাবমিট করুন</button>
                             </div>
                         </form>
                         </div>
