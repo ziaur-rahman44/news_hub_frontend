@@ -11,8 +11,12 @@
     font-size: 18px!important;
     padding: 10px;
 }
+.itemBanner h3:hover{
+    color: #7d5fff;
+}
 .titleTop{
-    background-color: rgb(123, 128, 127);
+    background-color: 
+    #3d3d3d;
     color: white;
     padding:16px;
 }
@@ -22,11 +26,19 @@
     font-size: 20px;
 }
 
+
+
+
+/* sliding catagory */
+.catmanu li.active{
+    background-color: burlywood;
+}
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="mainBox"] {
      max-height: 200px;
-     font-size: 15px;
+     font-size: 20px;
      padding: 20px;
     }
 }

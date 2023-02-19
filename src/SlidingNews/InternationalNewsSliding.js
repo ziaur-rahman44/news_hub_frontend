@@ -51,7 +51,7 @@ const InternationalNewsSliding = () => {
                             <img src={news} alt="Shoes" className=" h-36 w-auto" />
                         </figure>
                         <div className="w-60">
-                            <h2 className="lg:font-bold text-justify px-2">{title}</h2>
+                            <h2 className="lg:font-bold titles text-justify px-2">{title}</h2>
                             <p className='text-justify px-2 py-2 text-[#5b54f2]'>পুরো খবর...</p>
                         </div>
                             </Link>

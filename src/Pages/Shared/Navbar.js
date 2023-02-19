@@ -4,7 +4,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './NavBar.css'
-import { Link, useSearchParams } from "react-router-dom";
+import { NavLink, Link, useSearchParams } from "react-router-dom";
 import SearchBar from './SearchBar';
 
 const Navbar = () => {
@@ -56,16 +56,16 @@ const Navbar = () => {
         signOut(auth);
       };
     const menuItem = <>
-        <li><Link to="/">হোম</Link></li>
-        <li><Link to="/sportsnews">খেলাধুলা</Link></li>
-        <li><Link to="/nationalsnews">জাতীয়</Link></li>
-        <li><Link to="/internationalnews">আন্তর্জাতিক</Link></li>
-        <li><Link to="/sciencenews">বিজ্ঞান ও প্রযুক্তি</Link></li>
+        <li><NavLink exact activeClassName="active" to="/">হোম</NavLink></li>
+        <li><NavLink  activeClassName="active" to="/sportsnews">খেলাধুলা</NavLink></li>
+        <li><NavLink  activeClassName="active"  to="/nationalsnews">জাতীয়</NavLink></li>
+        <li><NavLink  activeClassName="active"  to="/internationalnews">আন্তর্জাতিক</NavLink></li>
+        <li><NavLink  activeClassName="active"  to="/sciencenews">বিজ্ঞান ও প্রযুক্তি</NavLink></li>
         {
-                user && <li><Link to="/dashboard">ড্যাশবোর্ড</Link></li>
+                user && <li><NavLink  activeClassName="active" to="/dashboard">ড্যাশবোর্ড</NavLink></li>
             }
             <li>{user? <button className="btn btn-active btn-ghost text-2xl" onClick={logout}>লগআউট</button>:<Link to="/login">লগ ইন</Link>} </li>
-            <li class="lg:ml-auto"><SearchBar/></li>
+            <li class="md:d-block"><SearchBar/></li>
     </>
         
     

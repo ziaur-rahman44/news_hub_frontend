@@ -15,12 +15,13 @@ const Post = () => {
 }, []);
 
 
+
   // const dateshow = document.getElementById("ami")
   // const getDate = dateshow.innerText;
 
   const detailShow = content;
   const detailsHowStr = detailShow.replace(/(<([^>]+)>)/ig,'');
-  const [fileName , setFileName] = useState("")
+
 //  date input get
   // const show = document.getElementById("dateCollect")
   // const showDate = show.innerText;
@@ -29,10 +30,7 @@ const Post = () => {
   // const sTime = document.getElementById("timeCollect")
   // const showTime = sTime.innerText;
   // console.log(showDate,showTime)
-  const handleImage = e =>{
-    e.preventDefault();
-    setFileName(e.target.files[0])
-  }
+ 
 
 
   const handleSubmit =  event =>{
@@ -41,12 +39,11 @@ const Post = () => {
     const title = event.target.title.value;
     const section = event.target.section.value;
     const details = detailsHowStr;
-    const formData = new FormData()
-    formData.append("title" , title);
-    formData.append("section" , section);
-    formData.append("details", details);
-    formData.append("image" , fileName)
-    
+    const data = {
+      title: title,
+      section: section,
+      details: details
+    }
     // const date = ;
     
 
@@ -60,12 +57,12 @@ const Post = () => {
     // .catch((err)=>{
     //   console.log(err)
     // })
-    fetch("https://news-hub-server-six.vercel.app/allnews",{
+    fetch("http://localhost:5000/allnews",{
       method: 'POST',
        headers:{
           'content-type': 'application/json;',
       },
-      body:JSON.stringify(formData),
+      body:JSON.stringify(data),
   })
   .then(res => res.json())
     
@@ -88,6 +85,7 @@ const Post = () => {
                   <div className="card card-primary rounded-sm">
                         <div className="card-header">
                             <h3 className=" bg-primary p-4 text-white text-4xl font-extralight">আপলোড নিউজ</h3>
+                           
                         </div>
                         {/* /.card-header */}
                         {/* form start */}
@@ -110,7 +108,6 @@ const Post = () => {
                             <div className="form-group text-left text-[20px] mb-2">
                                 <label>নিউজ ফটো</label>
                                 <input filename="image" type="file"
-                                onChange={handleImage} 
                                 className="form-control input input-bordered w-full" id="exampleInputEmail1" placeholder="লিখুন..." />
                             </div>
                             

@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import {NavLink, Link, Outlet } from 'react-router-dom';
+import './Banner.css'
 
 const DrawerNews = () => {
+    var listItems = document.querySelectorAll("ul li");
+    listItems.forEach(function(item) {
+        item.onClick.style.backgroundColor = "blue";
+      });
+      
     return (
         <div className="drawer">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
@@ -14,11 +20,11 @@ const DrawerNews = () => {
                 </div> 
                 <div className="px-5 mx-2 text-primary ">ক্যাটাগরী</div>
                 <div className="flex-0 hidden lg:block mr-auto">
-                    <ul className="menu menu-horizontal">
-                        <li><Link to="/">খেলাধুলা</Link></li>
-                        <li><Link to="/national">জাতীয়</Link></li>
-                        <li><Link to="/international">আন্তর্জাতিক</Link></li>
-                        <li><Link to="/science">বিজ্ঞান ও প্রযুক্তি</Link></li>
+                    <ul className="menu catmanu menu-horizontal">
+                        <li><NavLink exact activeClassName="active" to="/">খেলাধুলা</NavLink></li>
+                        <li><NavLink activeClassName="active" to="/national">জাতীয়</NavLink></li>
+                        <li><NavLink activeClassName="active" to="/international">আন্তর্জাতিক</NavLink></li>
+                        <li><NavLink activeClassName="active" to="/science">বিজ্ঞান ও প্রযুক্তি</NavLink></li>
                     </ul>
                 </div>
                 </div>
@@ -27,8 +33,8 @@ const DrawerNews = () => {
             </div> 
             <div className="drawer-side ">
                 <label htmlFor="my-drawer-3" className="drawer-overlay"></label> 
-                <ul className="menu p-4 overflow-y-auto w-80 bg-base-100">
-                    <li><Link to="/">খেলাধুলা</Link></li>
+                <ul className="menu catmanu p-4 overflow-y-auto w-80 bg-base-100">
+                    <li ><Link to="/">খেলাধুলা</Link></li>
                     <li><Link to="/national">জাতীয়</Link></li>
                     <li><Link to="/international">আন্তর্জাতিক</Link></li>
                     <li><Link to="/science">বিজ্ঞান ও প্রযুক্তি</Link></li>

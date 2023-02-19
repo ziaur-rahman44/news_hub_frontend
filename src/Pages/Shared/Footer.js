@@ -18,7 +18,7 @@ const Footer = () => {
         </div> 
           </div>
         <div>
-          <p>Copyright © 2022 - All right reserved by Honest News Hub</p>
+          <p>Copyright © 2023 - All right reserved by Honest News Hub</p>
         </div>
 </footer>
     );
